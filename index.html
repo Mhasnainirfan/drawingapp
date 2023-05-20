@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>DRAWING APP</h1>
+    <div class="feild">
+        <canvas id ="canvas"></canvas>
+        
+        <div class="tools">
+     
+            <button onClick="undo_last()"type = "button" class ="button">reset</button>
+            <button onClick="clear_canvas()" type = "button" class ="button2">clear</button>
+         
+
+            
+
+            <div onClick="change_color(this)"class="color-field" style ="background: rgb(229, 255, 0);"></div>
+            <div onClick="change_color(this)" class="color-field" style ="background: rgb(27, 226, 9);"></div>
+            <div onClick="change_color(this)" class="color-field" style ="background: rgb(16, 80, 218);"></div>
+            <div onClick="change_color(this)" class="color-field" style ="background: rgb(0, 0, 0);"></div>
+
+            <input onInput="draw_color = this.value" type="color" class ="color-picker">
+            <input type="range" min="0" max="100" class="pen-range" onInput="draw_width = this.value">
+    </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
